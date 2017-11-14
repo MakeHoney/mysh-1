@@ -8,6 +8,8 @@
 
 #include "built_in.h"
 
+pid_t kill(pid_t pid, int sign);
+
 int do_cd(int argc, char** argv) {
   if (!validate_cd_argv(argc, argv))
     return -1;
@@ -36,7 +38,7 @@ int do_fg(int argc, char** argv) {
   if (!validate_fg_argv(argc, argv))
     return -1;
 
-  // TODO: Fill this.
+  printf("process poped from backgound!\n");
 
   return 0;
 }

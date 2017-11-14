@@ -4,6 +4,8 @@
 typedef int (*built_in_command_do)(int, char**);
 typedef int (*built_in_command_validate)(int, char**);
 
+int kill(pid_t, int);
+
 struct built_in_command
 {
   char command_name[512];
